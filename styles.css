@@ -15,25 +15,38 @@
 }
 
 #box-3 {
-    border: thin dotted;
+    border: dotted red;
+    /* mucking around with omitted values: thickness set to default (i.e. medium)*/
 }
 
 #box-4 {
-    border: thin double;
+    /* border: thin double; */
+    /* thin property here reduced border to single line, worked without "thin" property */
+    border: double;
+    /* default thickness set to medium (hence medium property redundant), which shows both lines */
 }
 
 #box-5 {
-    border: thick solid;
+    border-style: solid;
+    /* border-style: when only one style is specified for border-style, it applies to all sides */
+    border-width: thick;
+    /* width properties not recognised in border-style, so had to add border-width property */
 }
 
 #box-6 {
-    border: thick dashed;
+    border-style: dashed solid;
+     /* first style applies to top and bottom, second to left and right */
+    border-width: thick;
 }
 
 #box-7 {
-    border: thick dotted;
+    border-style: dotted solid dashed;
+    /*  first style applies to the top, the second to the left and right, the third to the bottom */
+    border-width: thick;
 }
 
 #box-8 {
-    border: thick double;
+    border-style: double solid dotted dashed;
+    /* the styles apply to the top, right, bottom, and left in that order (clockwise). */
+    border-width: thick;
 }
